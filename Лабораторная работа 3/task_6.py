@@ -4,12 +4,10 @@ max_index = 0
 max_number = list_numbers[max_index]
 
 for i, current_number in enumerate(list_numbers):  # перебераем пары индекс - значение
-    max_number = list_numbers[max_index]
     if current_number >= max_number:  # если текущий элемент больше того, который встречали ранее
         max_index = i  # то перезаписываем индекс максимального элемента
-        max_number = list_numbers[max_index]  # и перезаписываем элемент
+        max_number = current_number  # и перезаписываем элемент
 # получаем 9 по порядку элемент (учитывая 0)
-
 list_numbers[max_index], list_numbers[-1] = list_numbers[-1], list_numbers[max_index]
 
 print(list_numbers)
